@@ -13,7 +13,15 @@
     </properties>
     <modules>
         <module>jc-learning-core</module>
+        <module>jc-learning-9</module>
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.28</version>
+        </dependency>
+    </dependencies>
     <build>
         <plugins>
             <plugin>
