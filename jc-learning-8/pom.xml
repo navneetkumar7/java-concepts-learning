@@ -9,19 +9,12 @@
         <version>0.0.1</version>
     </parent>
 
-    <artifactId>jc-learning-9</artifactId>
-    <name>java-concepts-learning-9</name>
+    <artifactId>jc-learning-8</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-<dependencies>
-    <dependency>
-        <groupId>com.nt.jcleaningcore</groupId>
-        <artifactId>jc-learning-core</artifactId>
-        <version>${project.version}</version>
-    </dependency>
-</dependencies>
+
 </project>
