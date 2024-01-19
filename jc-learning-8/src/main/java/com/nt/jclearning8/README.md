@@ -14,7 +14,7 @@
       Concise version of BiFun where inputs and o/p are same.
 4. Final and effective final:  This apply to  the local variable inside the method and the variable has been used inside the lambda
    declaration. Compiler won't allow you to change it as the lambda has taken the snapshot of it and it should remain
-   same , as lambda can be passed as parameter inside an method to execute the local variable value can used, and so
+   same , as lambda can be passed as parameter inside an method to execute where the local variable value can be used, and so
    there should not be any surprises. Effective final is final in all senses but haven't defined the keyword final.
 5. Method references: to make expression more concise, removing redundancy from the code.
     - Four Types:
@@ -28,7 +28,7 @@
 
 ## Streams
 1. Streams are all about processing data efficiently, streams do not hold data or not another way of organising data, like an array or a collection.
-2. The **Pipeline**: A stream pipeline consists of operations that rin on a stream to produce a result
+2. The **Pipeline**: A stream pipeline consists of operations that run on a stream to produce a result
     - 3 parts to a stream pipeline:
       - **Source**- where the stream comes from e.g list 
       - **Intermediate operations**:transforms the stream into another one. e.g filter()
@@ -36,7 +36,7 @@
 3. Streams can only be used once, once terminal operation executed ,streams are not longer usable
 4. Streams are lazy, need terminal operation for processing.
 5. Creating Streams:
-    - Arrays.stream() : creating stream using array.
+    - Arrays.stream() : creating stream using array. **public static < T> Stream< T> stream(T[] array)**
     - Default Collection interface method stream()
     - Stream.of() is a static generically-typed utility method that accepts a varargs parameter and returns an ordered stream of those values. **public static < T> Stream< T> of(T...values)**
     - Creating streams from a file: File.lines() method used to stream a file.It provides one ine at a time from the file as a data element in the stream. **public static Stream< String> lines(Path path)**
@@ -49,7 +49,10 @@
      - count() ->long
      - min(Comparator),max(Comparator)->Optional<T>- stream may be empty
      - reduce()-> varies
+       - T reduce(T identity, BinaryOperator\<T> accumulator)
+       - Optional\<T> reduce(BinaryOperator\<T> accumulator)
      - collect()-> varies
+       - This is special type of reduction called a mutuable reduction because we use the same mutable object while accumulating. e.g ArrayList.
    - Other terminal operations:
      - findAny(),findFirst()-> Optional<T>
      - allMatch(), anyMatch(), noneMatch()-> boolean

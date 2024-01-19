@@ -35,7 +35,7 @@ public class BasicLambda {
         System.out.println("supplier  execution: get: "+supplier.get());
 
         // 3.3 Consumer and BiConsumer: use the parameter but not interested in the return type
-        Consumer<String> printConsumer= str->System.out.println(str);
+        Consumer<String> printConsumer= System.out::println;
         System.out.println("Consumer execution:");
         List<String> names= Arrays.asList("John","Shubham");
         names.forEach(printConsumer);
@@ -48,6 +48,7 @@ public class BasicLambda {
 
         // 3.5 UnaryOperator: add by 1 is a unary operator; BinaryOperator: multiplying, sub, add , div 2 numbers is a binary operator
             // UnaryOperator<T> extends Function<T,T> is a functional interface. // T apply(T t)
+        UnaryOperator<Integer> unaryOperator=val->val;
         // Concise version of Function, where input and output is T
         // BinaryOperator<T> extends BiFunction<T,T,T> // T apply(T t1, T t2)
         //Concise version of BiFun where inputs and o/p are same;
