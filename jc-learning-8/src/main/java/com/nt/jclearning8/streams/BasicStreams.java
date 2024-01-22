@@ -5,6 +5,7 @@ import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -103,6 +104,11 @@ public class BasicStreams {
         Double s1 = Stream.of("apple", "mango", "cake")
                 .collect(Collectors.averagingInt(s2 -> s2.length()));
         System.out.println(s1);
+
+        Stream<Integer> ival=Stream.of(1,2,3,4,4);
+        int valSum=ival.collect(Collectors.summingInt( c->c));
+        System.out.println("summing int:: "+ valSum);
+
         //Collectors.toMap()
         Map<String, Integer> map = Stream.of("apple", "mango", "cake")
                 .collect(Collectors.toMap(s3 -> s3, s3 -> s3.length()));
